@@ -16,23 +16,24 @@ public class Client{
         ObjectOutputStream outStream = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
         Scanner sc = new Scanner(System.in);
+        
         try{
-        while(flag){
-            String msg = sc.nextLine();
-            if(msg == "QUIT"){
+            while(flag){
+                String msg = sc.nextLine();
+                if(msg == "QUIT"){
+                    Packet packet = new Packet(msg);
+                    outStream.writeObject(packet);
+                    System.exit(0);
+                    }
+
                 Packet packet = new Packet(msg);
                 outStream.writeObject(packet);
-                System.exit(0);
-            }
 
-            Packet packet = new Packet(msg);
-            outStream.writeObject(packet);
-
-            for(int i =0; i < 10; i++){
-            Packet recvPacket = (Packet)inStream.readObject();
-            System.out.println(recvPacket.message);
-            }
-        }
+                for(int i =0; i < 10; i++){
+                Packet recvPacket = (Packet)inStream.readObject();
+                System.out.println(recvPacket.message);
+                }
+            } 
         }
         catch(Exception e){
         System.out.println("Server Closed by Client");

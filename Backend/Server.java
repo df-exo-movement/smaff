@@ -18,24 +18,24 @@ public class Server {
         ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
         boolean flag = true;
         try{
-        while(flag){
-            
-        Packet recvPacket = (Packet)inStream.readObject();
-        System.out.println(recvPacket.message);
+            while(flag){
 
-        if(recvPacket.message.equals("Hello!")){
-            Packet packet = new Packet("Hi! - From Server");
-            outStream.writeObject(packet);
+            Packet recvPacket = (Packet)inStream.readObject();
+            System.out.println(recvPacket.message);
+
+            if(recvPacket.message.equals("Hello!")){
+                Packet packet = new Packet("Hi! - From Server");
+                outStream.writeObject(packet);
+            }
+            if(recvPacket.message.equals("QUIT")){
+                break;
+             }
+         }           
         }
-        if(recvPacket.message.equals("QUIT")){
-            break;
-        }
-        }
-    }
     catch(Exception e){
     System.out.println("[ERROR] Client Forcibly Disconnected");
     serverSocket.close();
     System.exit(0);
-    }
+         }
     }
 }
