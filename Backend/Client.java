@@ -3,6 +3,8 @@ import java.net.Socket;
 import java.io.*;
 import java.util.Scanner;
 
+import javax.sql.rowset.CachedRowSet;
+
 public class Client{
     public static final int PORT = 3000;
     public static void main(String[] args) throws Exception{
@@ -18,11 +20,25 @@ public class Client{
         Scanner sc = new Scanner(System.in);
         try{
         while(flag){
-            String msg = sc.nextLine();
-            if(msg == "QUIT"){
-                Packet packet = new Packet(msg);
-                outStream.writeObject(packet);
-                System.exit(0);
+            // String msg = sc.nextLine();
+            // if(msg == "QUIT"){
+            //     Packet packet = new Packet(msg);      TEST CODE FOR CLEAN EXIT
+            //     outStream.writeObject(packet);        
+            //     System.exit(0);
+            // }
+            int choice = sc.nextLine();
+             
+
+            switch(choice){
+                case 1:
+                    Packet packet = new Packet("QUIT");
+                    outStream.writeObject(packet);        
+                    System.exit(0);
+
+                
+                case 2:
+                    
+
             }
 
             Packet packet = new Packet(msg);
