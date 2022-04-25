@@ -1,9 +1,7 @@
-package smaff.Backend;
+// package smaff.Backend;
 import java.net.Socket;
 import java.io.*;
 import java.util.Scanner;
-
-import javax.sql.rowset.CachedRowSet;
 
 public class Client{
     public static final int PORT = 3000;
@@ -17,7 +15,6 @@ public class Client{
         
         ObjectOutputStream outStream = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
-        Scanner sc = new Scanner(System.in);
         try{
         while(flag){
             // String msg = sc.nextLine();
@@ -26,28 +23,36 @@ public class Client{
             //     outStream.writeObject(packet);        
             //     System.exit(0);
             // }
-            int choice = sc.nextLine();
-             
-
+            Scanner sc = new Scanner(System.in);
+            String choice = sc.nextLine();
+            
             switch(choice){
-                case 1:
+                case "1":
                     Packet packet = new Packet("QUIT");
-                    outStream.writeObject(packet);        
+                    outStream.writeObject(packet.getPacketMessage());     
+                    sc.close();   
                     System.exit(0);
 
                 
-                case 2:
-                    
+                case "2":
+                    //Scanner temp = new Scanner(System.in);
+                    String filePath = sc.nextLine();
+
+                    File file = new File(filePath);
+                    Packet imgpacket = new Packet(file);
+                    outStream.writeObject(imgpacket.getBase64Image());
 
             }
 
-            Packet packet = new Packet(msg);
-            outStream.writeObject(packet);
+            //Packet packet = new Packet(msg);
+            //outStream.writeObject(packet);
 
             for(int i =0; i < 10; i++){
             Packet recvPacket = (Packet)inStream.readObject();
             System.out.println(recvPacket.message);
             }
+
+            
         }
         }
         catch(Exception e){
