@@ -15,13 +15,14 @@ public class Server {
         System.out.println("[SERVER UP] Server is running on port " + PORT);
         Socket socket = serverSocket.accept();
         //ObjectOutputStream outStream = new ObjectOutputStream(socket.getOutputStream());
+        System.out.println("check .25");
         InputStream inStream = socket.getInputStream();
-        
+        System.out.println("check .5");
         boolean flag = true;
         try{
 
             while(flag){
-
+             System.out.println("check 0");
              String recvImg = inStream.toString();
              if(recvImg == "QUIT")
                  break;
