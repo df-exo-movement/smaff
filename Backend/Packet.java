@@ -1,4 +1,3 @@
-package smaff.Backend;
 
 import java.io.Serializable;
 

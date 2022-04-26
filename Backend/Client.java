@@ -1,4 +1,3 @@
-package smaff.Backend;
 import java.net.Socket;
 import java.io.*;
 import java.util.Scanner;
