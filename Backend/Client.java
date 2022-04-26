@@ -13,8 +13,8 @@ public class Client{
         boolean flag = true;
         Socket socket = new Socket("127.0.0.1", PORT);
         
-        ObjectOutputStream outStream = new ObjectOutputStream(socket.getOutputStream());
-        ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
+        OutputStream outStream = socket.getOutputStream();
+        InputStream inStream = socket.getInputStream();
         try{
         while(flag){
             // String msg = sc.nextLine();
@@ -23,24 +23,27 @@ public class Client{
             //     outStream.writeObject(packet);        
             //     System.exit(0);
             // }
+            System.out.println("Make a selection. 1 = Quit, 2 = Send Image");
             Scanner sc = new Scanner(System.in);
             String choice = sc.nextLine();
             
             switch(choice){
                 case "1":
                     Packet packet = new Packet("QUIT");
-                    outStream.writeObject(packet.getPacketMessage());     
+                    outStream.write(packet.getPacketMessage());     
                     sc.close();   
                     System.exit(0);
 
                 
                 case "2":
                     //Scanner temp = new Scanner(System.in);
+                    System.out.println("Enter a file path");
                     String filePath = sc.nextLine();
 
                     File file = new File(filePath);
                     Packet imgpacket = new Packet(file);
-                    outStream.writeObject(imgpacket.getBase64Image());
+                   // outStream.writeObject(imgpacket.getBase64Image());
+                    System.out.println(imgpacket.getBase64Image());
 
             }
 
