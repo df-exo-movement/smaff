@@ -14,13 +14,13 @@ public class Server {
         ServerSocket serverSocket = new ServerSocket(PORT);
         System.out.println("[SERVER UP] Server is running on port " + PORT);
         Socket socket = serverSocket.accept();
-        ObjectOutputStream outStream = new ObjectOutputStream(socket.getOutputStream());
-        ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
+        FileOutputStream outStream = new ObjectOutputStream(socket.getOutputStream());
+        FileInputStream inStream = new ObjectInputStream(socket.getInputStream());
         boolean flag = true;
         try{
         while(flag){
             
-        Packet recvPacket = (Packet)inStream.readObject();
+        String inFile = 
         System.out.println(recvPacket.message);
 
         if(recvPacket.message.equals("Hello!")){
