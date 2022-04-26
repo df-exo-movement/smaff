@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 public class Packet {
     String message;
     String base64Image;
+    byte[] bytes;
 
     public Packet(String message){
         this.message = message;
@@ -15,7 +16,7 @@ public class Packet {
     public Packet(File file) throws Exception{ //accepts an object of type File and encodes it to a base64 String for storage.
         
         byte[] fileBytes = new byte[(int) file.length()]; //initialize byte array for file
-
+        this.bytes = fileBytes;
         FileInputStream in = new FileInputStream(file); //create file input stream for input file
         in.read(fileBytes); //read the byte array of the file and store it in the byte array
 
@@ -27,6 +28,9 @@ public class Packet {
         return this.base64Image;
     }
 
+    public byte[] getByteArray(){
+        return this.bytes;
+    }
     public String getPacketMessage(){
         return this.message;
     }

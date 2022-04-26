@@ -30,7 +30,9 @@ public class Client{
             switch(choice){
                 case "1":
                     Packet packet = new Packet("QUIT");
-                    outStream.write(packet.getPacketMessage());     
+                    String x = packet.getPacketMessage();
+                    byte[] msg = x.getBytes();
+                    outStream.write(msg);     
                     sc.close();   
                     System.exit(0);
 
@@ -42,22 +44,22 @@ public class Client{
 
                     File file = new File(filePath);
                     Packet imgpacket = new Packet(file);
-                   // outStream.writeObject(imgpacket.getBase64Image());
-                    System.out.println(imgpacket.getBase64Image());
+                    outStream.write(imgpacket.getByteArray());
+                    
 
             }
 
             //Packet packet = new Packet(msg);
             //outStream.writeObject(packet);
 
-            for(int i =0; i < 10; i++){
-            Packet recvPacket = (Packet)inStream.readObject();
-            System.out.println(recvPacket.message);
+            // for(int i =0; i < 10; i++){
+            // Packet recvPacket = (Packet)inStream.readObject();
+            // System.out.println(recvPacket.message);
             }
 
             
         }
-        }
+        
         catch(Exception e){
         System.out.println("Server Closed by Client");
         socket.close();
