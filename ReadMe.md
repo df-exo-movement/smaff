@@ -24,7 +24,7 @@ pip install tensorflow
 
 ### run model
 
-``
+```
 cd ./application/CNN
 
 python model.py
