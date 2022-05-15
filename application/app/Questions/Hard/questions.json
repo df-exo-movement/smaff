@@ -1,0 +1,79 @@
+
+{
+  "1": {
+  "text": "Derek had to do a lot of homework this week. He doesn't like homework. Why does he keep getting more homework? It doesn't help that the homework is harder and that the teacher keeps calling on him. Why doesn't the teacher call on someone else instead? This makes Derek feel...\n",
+  "img_path": "./Questions/Image/angry1.jpg",
+  "answer":
+    "angry"
+
+},
+
+  "2": {
+  "text": "Tristan loves the Harry Potter series. He's up to the second book right now. He really wants the rest of the books in the series. When he got home, his dad gave him the rest of the books! \n",
+  "img_path": "./Questions/Image/happy1.jpg",
+  "answer":
+    "happy"
+
+},
+
+  "3": {
+    "text": "Mom has been hinting at something recently. I wonder what it is. She's hiding something. I've been trying to ask her about it but she won't tell me. When I got home later, I heard a sound under a blanket. I lifted the blanket and a puppy came out! I wasn't expecting that!\n",
+    "img_path": "./Questions/Image/surprised1.jpg",
+    "answer": "surprised"
+  },
+
+  "4": {
+    "text": "He was very close with his grandpa. They used to go fishing together every summer. His grandpa always helped him feel better after a bad day. Unfortunately his grandpa passed away recently. He misses him so much. It makes him feel very\n",
+    "img_path": "./Questions/Image/sad1.jpg",
+    "answer": "sad"
+  },
+
+  "5": {
+    "text": "Someone skipped me when I was waiting on line today. I tried to confront them but instead they ignored me. This is unfair!\n",
+    "img_path": "./Questions/Image/angry2.jpg",
+    "answer": "angry"
+  },
+
+  "6": {
+    "text": "The subject is very hard. It takes a lot of time for me to understand how things work. Normally I can do well on tests in other subjects but I think I did bad on this test. I'm not looking forward to getting the grade back.\n",
+    "img_path": "./Questions/Image/sad2.jpg",
+    "answer": "sad"
+  },
+
+  "7": {
+    "text": "He's been playing this game a lot to get better. Before, he wasn't that good at the game. He keeps better at the game and today, he got a new high score!! \n",
+    "img_path": "./Questions/Image/happy2.jpg",
+    "answer": "happy"
+  },
+
+  "8": {
+    "text": "I slowly opened the door. I looked around to make sure that there wasn't anything suspicious. There wasn't. Thank goodness. I sighed in relief. Then my brother jumped out from behind the bed and yelled \"BOO!\"\n",
+    "img_path": "./Questions/Image/surprised2.jpg",
+    "answer": "surprised"
+  },
+
+  "9": {
+    "text": "The person behind me keeps pulling on my hair. I kept telling them to stop but they wouldn't. They also take my things without asking. This makes me feel\n",
+    "img_path": "./Questions/Image/angry3.jpg",
+    "answer": "angry"
+  },
+
+  "10": {
+    "text": "She was friends with them for a long time. She thought they were going to be friends forever but all of a sudden, they started ignoring her. She kept trying to talk to them. She doesn't understand why they're doing this. It hurts her a lot. It makes her feel\n",
+    "img_path": "./Questions/Image/sad3.jpg",
+    "answer": "sad"
+  },
+
+  "11": {
+    "text": "There has been a lot going on in the current TV series. The previous episode was very interesting but it ended with a cliffhanger. I've been wondering when the next episode comes out to see what happens next. Today the episode was finally released!!\n",
+    "img_path": "./Questions/Image/happy3.jpg",
+    "answer": "happy"
+  },
+
+  "12": {
+    "text": "Thomas' birthday is coming soon. I'm going to get him something cool and hide it. I'll pretend like everything is normal but before he comes home, I'll decorate the house! That way, when he comes home, he won't expect it! It'll definitely make Thomas…\n",
+    "img_path": "./Questions/Image/surprised3.jpg",
+    "answer": "surprised"
+  }
+
+}

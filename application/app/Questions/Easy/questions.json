@@ -1,0 +1,79 @@
+
+{
+  "1": {
+  "text": "Pick the emotion \n",
+  "img_path": "./Questions/Image/angry1.jpg",
+  "answer":
+    "angry"
+
+},
+
+  "2": {
+  "text": "Pick the emotion \n",
+  "img_path": "./Questions/Image/happy1.jpg",
+  "answer":
+    "happy"
+
+},
+
+  "3": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/surprised1.jpg",
+    "answer": "surprised"
+  },
+
+  "4": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/sad1.jpg",
+    "answer": "sad"
+  },
+
+  "5": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/angry2.jpg",
+    "answer": "angry"
+  },
+
+  "6": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/sad2.jpg",
+    "answer": "sad"
+  },
+
+  "7": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/happy2.jpg",
+    "answer": "happy"
+  },
+
+  "8": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/surprised2.jpg",
+    "answer": "surprised"
+  },
+
+  "9": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/angry3.jpg",
+    "answer": "angry"
+  },
+
+  "10": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/sad3.jpg",
+    "answer": "sad"
+  },
+
+  "11": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/happy3.jpg",
+    "answer": "happy"
+  },
+
+  "12": {
+    "text": "Pick the emotion \n",
+    "img_path": "./Questions/Image/surprised3.jpg",
+    "answer": "surprised"
+  }
+
+}

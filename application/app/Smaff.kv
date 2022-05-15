@@ -1,0 +1,288 @@
+#: import NoTransition kivy.uix.screenmanager.NoTransition
+
+WindowManager:
+    StartPage:
+    CreateProfile:
+    Login:
+    MainMenu:
+    Correct:
+    Incorrect:
+    CameraPage:
+    SelectDiff:
+    QuestionPage:
+    HardQuestionPage:
+    Win:
+
+
+<SelectDiff>:
+    name: "selectdiff"
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Choose your difficulty!"
+        Button:
+            text: "Easy"
+            on_press:
+                self.difficulty = "Normal"
+                root.manager.current = 'questionpage'
+
+        Button:
+            text: "Hard"
+            on_press:
+                self.difficulty = "Hard"
+                root.manager.current = 'hardquestionpage'
+
+<CameraPage>:
+    name: "camerapage"
+    on_enter:
+        maff.loadcamera()
+
+    on_leave:
+        maff.unloadcamera()
+
+    MaFF:
+        id: maff
+
+    Button:
+        size_hint: (1,.1)
+        text: "Go Back"
+        on_press:
+            root.manager.current = "mainmenu"
+
+<StartPage>:
+    name: "landing"
+    GridLayout:
+        cols:1
+        Label:
+            text: "Welcome To Smaff!\nLogin or Create a New Profile to Begin"
+            halign: "center"
+
+        Button:
+            text: "Login"
+            on_release:
+                root.manager.current = "login"
+
+        Button:
+            text: "Create Profile"
+            on_release:
+                root.manager.current = "createprofile"
+        Button:
+            text: "Quit"
+            on_release:
+                app.Exit()
+
+
+<Login>:
+    name: "login"
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Enter Login Details"
+        TextInput:
+            id: username
+            multiline: False
+            write_tab: False
+            text: "username"
+
+        TextInput:
+            id: password
+            password: True
+            text: "password"
+            multiline: False
+            on_text_validate:
+                root.verify(username.text, password.text)
+                root.manager.current = "mainmenu" if root.authenticated == True else "login"
+
+        Button:
+            text: "Login"
+
+            on_release:
+                root.verify(username.text, password.text)
+                root.manager.current = "mainmenu" if root.authenticated == True else "login"
+        Button:
+            text: "Go Back"
+            on_release:
+                root.manager.current = "landing"
+
+<CreateProfile>:
+    name: "createprofile"
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Enter Login Details"
+        TextInput:
+            id: username
+            multiline: False
+            write_tab: False
+            text: "enter new username"
+
+        TextInput:
+            id: password
+            password: True
+            text: "enter new password"
+            multiline: False
+            on_text_validate:
+                root.createUser(username.text, password.text)
+
+        Button:
+            text: "Create User"
+            on_release:
+                root.createUser(username.text, password.text)
+
+        Button:
+            text: "Go Back"
+            on_release:
+                root.manager.current = "landing"
+
+<MainMenu>:
+    name: "mainmenu"
+    GridLayout:
+        cols:1
+        Label:
+            text: "Main Menu"
+        Button:
+            text: "Make a Funny Face"
+            on_release:
+                root.manager.current = "camerapage"
+        Button:
+            text: "Play"
+            on_release:
+                root.manager.current = "selectdiff"
+        Button:
+            text: "Logout"
+            on_release:
+                root.manager.current = "landing"
+
+
+<HardQuestionPage>:
+    name: "hardquestionpage"
+    id: questionpage
+
+    on_enter:
+        gamemaff.loadcamera()
+    on_leave:
+        gamemaff.unloadcamera()
+    GridLayout:
+        id: gl
+        padding: "10dp"
+        cols:1
+        GridLayout:
+            cols:2
+            size_hint_y: .3
+            Label:
+                id: "question"
+                text: root.text
+                text_size: self.size
+
+#        Image:
+#            source: root.img_path
+        MaFF:
+            id: gamemaff
+
+        GridLayout:
+            padding: "5dp"
+            cols: 2
+            Button:
+                id: display
+                text: "Answer"
+                on_release:
+                    root.verify(gamemaff.ans.lower(), root.answer)
+            Button:
+                text: "Next Question"
+                size_hint_y: .3
+                on_press:
+                    root.refresh()
+
+
+                on_release:
+                    root.manager.current = 'win' if root.win == True else 'hardquestionpage'
+                    self.text = "Finish" if root.win == True else "Next Question"
+
+<QuestionPage>:
+    name: "questionpage"
+    id: questionpage
+    on_pre_enter:
+        root.manager.current = 'win' if self.win == True else 'questionpage'
+
+    GridLayout:
+        padding: "10dp"
+        cols:1
+        Label:
+            id: "question"
+            text: root.text
+            text_size: self.size
+            size_hint_y: .3
+        Image:
+            source: root.img_path
+        GridLayout:
+            padding: "5dp"
+            rows: 2
+            cols: 2
+            Button:
+                text: "Happy"
+                on_press:
+                    root.manager.current = "correct" if self.text.lower() == root.answer else "Incorrect"
+                    root.refresh()
+
+            Button:
+                text: "Surprised"
+                on_press:
+                    root.manager.current = "correct" if self.text.lower() == root.answer else "Incorrect"
+                    root.refresh()
+            Button:
+                text: "Angry"
+                on_press:
+                    root.manager.current = "correct" if self.text.lower() == root.answer else "Incorrect"
+                    root.refresh()
+            Button:
+                text: "Sad"
+                on_press:
+                    root.manager.current = "correct" if self.text.lower() == root.answer else "Incorrect"
+                    root.refresh()
+
+
+
+<Correct>:
+    background_color: 0, 0, 0, 0
+    name: "correct"
+    GridLayout:
+        cols:1
+
+        Label:
+            text: "Correct!!"
+        Button:
+            text: "Next Question"
+            on_press:
+#                root.refresh()
+            on_release:
+                root.manager.current = 'questionpage'
+<Incorrect>:
+    background_color: 0, 0, 0, 0
+    name: "Incorrect"
+    GridLayout:
+        cols:1
+
+        Label:
+            text: "Wrong Answer, Try Again!"
+        Button:
+            text: "Next Question"
+            on_press:
+#                root.refresh()
+            on_release:
+                root.manager.current = 'questionpage'
+
+<Win>:
+    name: 'win'
+
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Game Over"
+        Label:
+            text: "Score: 8/12"
+        Button:
+            text: "Return to Main Menu"
+            on_press:
+                root.manager.current = 'mainmenu'
+
+

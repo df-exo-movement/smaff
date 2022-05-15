@@ -1,0 +1,79 @@
+
+{
+  "1": {
+  "text": "I can't go to the park today! It is raining, I feel \n",
+  "img_path": "../Questions/Medium/1.jpg",
+  "answer":
+    "angry"
+
+},
+
+  "2": {
+  "text": "Stacy sees a puppy! She loves puppies! Stacy feels \n",
+  "img_path": "../Questions/Medium/2.jpg",
+  "answer":
+    "happy"
+
+},
+
+  "3": {
+    "text": "When Katie walked in the room, her friends jumped up and said, Happy Birthday! Katie is  \n",
+    "img_path": "../Questions/Medium/3.jpg",
+    "answer": "surprised"
+  },
+
+  "4": {
+    "text": "Luis broke his favorite toy. He feels \n",
+    "img_path": "../Questions/Medium/4.jpg",
+    "answer": "sad"
+  },
+
+  "5": {
+    "text": "Someone stole my favorite pencil! I am feeling \n",
+    "img_path": "../Questions/Medium/5.jpg",
+    "answer": "angry"
+  },
+
+  "6": {
+    "text": "I dropped my ice cream cone. I feel \n",
+    "img_path": "../Questions/Medium/6.jpg",
+    "answer": "sad"
+  },
+
+  "7": {
+    "text": "Joe won a stuffed animal! Joe is \n",
+    "img_path": "../Questions/Medium/7.jpg",
+    "answer": "happy"
+  },
+
+  "8": {
+    "text": "Tim jumped in front of Dan. Boo! Dan is \n",
+    "img_path": "../Questions/Medium/8.jpg",
+    "answer": "surprised"
+  },
+
+  "9": {
+    "text": "My puppy chewed up my shoes. I feel \n",
+    "img_path": "../Questions/Medium/9.jpg",
+    "answer": "angry"
+  },
+
+  "10": {
+    "text": "Sally fell down and hurt her knee. She feels \n",
+    "img_path": "../Questions/Medium/10.jpg",
+    "answer": "sad"
+  },
+
+  "11": {
+    "text": "My mom gave me an ice cream sundae with extra chocolate fudge and extra sprinkles! I feel \n",
+    "img_path": "../Questions/Medium/11.jpg",
+    "answer": "happy"
+  },
+
+  "12": {
+    "text": "It is my birthday! I walk in my house and everyone screams, Happy Birthday! I am \n",
+    "img_path": "../Questions/Medium/12.jpg",
+    "answer": "surprised"
+  }
+
+}
