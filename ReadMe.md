@@ -1,11 +1,9 @@
 
-# **S**how **M**e **A** **F**unny **F**ace
+# <p align='center'>**S**how **M**e **A** **F**unny **F**ace</p>
 
----
-## Introduction
-Welcome to Smaff! For the NYIT Computer Science B.S. Capstone project of Spring 2022, students: [Dylan Finn](https://github.com/df-exo-movement), [Jennifer Gulmohamad](https://github.com/jenniferg147), [Loyal Greene](https://github.com/LDGreene), and [Annie Zeng]()
-came together under the guidance of [Prof. Houwei Cao](https://www.nyit.edu/bio/hcao02) to create an educational game with the goal of teaching children emotional recognition and 
-the practical application of real time image classification.
+<p align='center'>Welcome to Smaff! For the NYIT Computer Science B.S. Capstone project of Spring 2022, students: <a href='https://github.com/df-exo-movement'>Dylan Finn</a>, <a href='https://github.com/jenniferg147'>Jennifer Gulmohamad</a>, <a href='https://github.com/LDGreene'>Loyal Greene</a>, and <a href='https://github.com/annzeng25'>Annie Zeng</a>
+came together under the guidance of <a href='https://www.nyit.edu/bio/hcao02'>Prof. Houwei Cao</a> to create an educational game with the goal of teaching children emotional recognition and response through
+the practical application of real time image classification.</p>
 
 ---
 
