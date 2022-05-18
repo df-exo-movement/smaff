@@ -32,7 +32,7 @@ pip install kivy opencv-python tensorflow
 
 2. Run application:
 ```
-cd ./application/smaff
+cd ./application/app
 
 python main.py
 ```
@@ -48,7 +48,7 @@ pip install tensorflow
 2. Run model
 
 ```
-cd ./application/CNN
+cd ./application/model
 
 python model.py
 ```
