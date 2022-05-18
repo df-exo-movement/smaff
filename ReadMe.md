@@ -7,6 +7,8 @@ Welcome to Smaff! For the NYIT Computer Science B.S. Capstone project of Spring 
 came together under the guidance of [Prof. Houwei Cao](https://www.nyit.edu/bio/hcao02) to create an educational game with the goal of teaching children emotional recognition and 
 the practical application of real time image classification.
 
+---
+
 Quick Links:
 
 [Report](https://github.com/df-exo-movement/smaff/blob/main/report/show_me_a_funny_face_report.pdf)
