@@ -1,4 +1,4 @@
-## Directory Outline:
+## Outline:
   - Liscences
     + Liscences for materials used
   - Questions
@@ -10,4 +10,4 @@
   + Smaff.kv
     + KVLang File
   + main.py
-    + Corresponding .py file for 
+    + executable python file to start application, corresponding to KVLang file.
