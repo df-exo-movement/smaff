@@ -3,7 +3,7 @@
 
 ---
 ## Introduction
-Welcome to Smaff! For the NYIT Computer Science B.S. Capstone project of Spring 2022, students: [Dylan Finn](https://github.com/df-exo-movement), [Jennifer Gulmohamad](), [Loyal Greene](), and [Annie Zeng]()
+Welcome to Smaff! For the NYIT Computer Science B.S. Capstone project of Spring 2022, students: [Dylan Finn](https://github.com/df-exo-movement), [Jennifer Gulmohamad](https://github.com/jenniferg147), [Loyal Greene](), and [Annie Zeng]()
 came together under the guidance of [Prof. Houwei Cao](https://www.nyit.edu/bio/hcao02) to create an educational game with the goal of teaching children emotional recognition and 
 the practical application of real time image classification.
 
