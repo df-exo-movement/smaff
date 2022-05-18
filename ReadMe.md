@@ -1,5 +1,4 @@
-
-# <p align='center'>**S**how **M**e **A** **F**unny **F**ace</p>
+<p align='center'><img height="250" width="250" src='https://user-images.githubusercontent.com/92129215/168939198-fa78e55e-8487-43e2-bad2-548aa6034dcf.png' style="border-radius:50%"></p>
 
 <p align='center'>Welcome to Smaff! For the NYIT Computer Science B.S. Capstone project of Spring 2022, students: <a href='https://github.com/df-exo-movement'>Dylan Finn</a>, <a href='https://github.com/jenniferg147'>Jennifer Gulmohamad</a>, <a href='https://github.com/LDGreene'>Loyal Greene</a>, and <a href='https://github.com/annzeng25'>Annie Zeng</a>
 came together under the guidance of <a href='https://www.nyit.edu/bio/hcao02'>Prof. Houwei Cao</a> to create an educational game with the goal of teaching children emotional recognition and response through
